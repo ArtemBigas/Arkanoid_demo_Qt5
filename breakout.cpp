@@ -82,6 +82,8 @@ void Breakout::drawObjects(QPainter *painter) {
   for (int i=0; i<N_OF_BRICKS; i++) {
     if (!bricks[i]->isDestroyed()) {
       painter->drawImage(bricks[i]->getRect(), bricks[i]->getImage());
+        painter->setPen(Qt::black);
+      painter->drawRect(bricks[i]->getRect());
     }
   }
 }
